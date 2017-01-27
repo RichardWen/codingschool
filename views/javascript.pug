@@ -1,0 +1,109 @@
+doctype html
+//
+  Urban by TEMPLATED
+  templated.co @templatedco
+  Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+html
+  head
+    title The Coding School
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='assets/css/main.css')
+    link(rel='stylesheet', href='assets/css/editors.css')
+  body.subpage
+    // Header
+    header#header
+      .logo
+        a(href='http://the-cs.org/')
+          | The Coding School
+      a(href='#menu') Menu
+    // Nav
+    nav#menu
+      ul.links
+        li
+          a(href='/') Home
+        li
+          a(href='/javascript') Javascript
+        li
+          a(href='/') Unity
+        li
+          a(href='/') Python
+    // Main
+    #main
+      // Section
+      section.wrapper
+        .inner
+          header.align-center
+            h1 Javascript
+            p Here is our in house code editor
+            section#editor
+              section#code_editors
+                #html.code_box
+                  h3 HTML
+                  textarea(name='html')
+                #css.code_box
+                  h3 CSS
+                  textarea(name='css')
+                #js.code_box
+                  h3 JavaScript
+                  textarea(name='js')
+              section#output
+                iframe
+        section.wrapper.style1
+          .inner
+            // 2 Columns
+            .flex.flex-2
+              .col.col1
+                .image.round.fit
+                  a.link(href='#classes')
+                    img(src='images/robot.jpg', alt='')
+              .col.col2
+                h3 Let's learn about functions!
+                  h4
+                    | Before we get into a function, lets ask what exactly a function is?
+                    p
+                      | Functions are little snippets of code that do a task for a programmer.
+                      | The cool thing about functions are that they can save time. Imagine we had a bunch of robots that needed to do a task like pick up boxes.
+                      | Now lets say all robots have a color and can only pick up boxes that are the same color as themselves. If we were to implement this without functions,
+                      | we'd have to write very similar code for every different colored robot. If we had a function, however, we can have code that notices what color
+                      | an input robot is and can handle what color boxes it needs to pick up.
+    // Section
+      // Footer
+    footer#footer
+      .copyright
+        ul.icons
+          li
+            a.icon.fa-twitter(href='#')
+              span.label Twitter
+          li
+            a.icon.fa-facebook(href='#')
+              span.label Facebook
+          li
+            a.icon.fa-instagram(href='#')
+              span.label Instagram
+          li
+            a.icon.fa-snapchat(href='#')
+              span.label Snapchat
+        p
+          | © Untitled. All rights reserved. Design:
+          a(href='https://templated.co') TEMPLATED
+          | . Images:
+          a(href='https://unsplash.com') Unsplash
+          | .
+    // Scripts
+    script(src='assets/js/jquery.min.js')
+    script(src='assets/js/jquery.scrolly.min.js')
+    script(src='assets/js/jquery.scrollex.min.js')
+    script(src='assets/js/skel.min.js')
+    script(src='assets/js/util.js')
+    script(src='assets/js/main.js')
+    script(src='javascripts/codemirror.js')
+    // For HTML/XML
+    script(src='javascripts/xml.js')
+    script(src='javascripts/htmlmixed.js')
+    // For CSS
+    script(src='javascripts/css.js')
+    // For JS
+    script(src='javascripts/javscript.js')
+    script(src='javascripts/render.js')
+    script(src='javascripts/tab.js')

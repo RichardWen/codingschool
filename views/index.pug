@@ -1,0 +1,112 @@
+html
+  head
+    title The Coding School
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='assets/css/main.css')
+  body
+    // Header
+    header#header.alt
+      .logo
+        a(href='http://the-cs.org/')
+          | The Coding School
+      a(href='#menu') Menu
+    // Nav
+    nav#menu
+      ul.links
+        li
+          a(href='/') Home    
+        li
+          a(href='/javascript') Javascript
+        li
+          a(href='/') Unity
+        li
+          a(href='/') Python
+    // Banner
+    section#banner
+      .inner
+        header
+          h1 The Coding School
+          p
+            | This is the Coding Schools helper site for all our curriculums
+        a.button.big.scrolly(href='#classes') Get Started
+    // Main
+    #main
+      // Section
+      section.wrapper.style1
+        .inner
+          // 2 Columns
+          .flex.flex-2
+            .col.col1
+              .image.round.fit
+                a.link(href='#classes')
+                  img(src='images/pic01.jpg', alt='')
+            .col.col2
+              h3 Follow Along our Lectures
+              a.button(href='#') Learn More
+      // Section
+      section.wrapper.style2
+        .inner
+          .flex.flex-2
+            .col.col2
+              h3 Work at your own pace
+              a.button(href='#classes') Learn More
+            .col.col1.first
+              .image.round.fit
+                a.link(href='generic.html')
+                  img(src='images/pic02.jpeg', alt='')
+      // Section
+      #classes
+        section.wrapper.style1
+          .inner
+            header.align-center
+              h2 Classes
+              p What are you learning today?
+            .flex.flex-3
+              .col.align-center
+                .image.round.fit
+                  img(src='images/pic03.png', alt='')
+                h3
+                  | Javascript
+                a.button(href='/javascript') Go
+              .col.align-center
+                .image.round.fit
+                  img(src='images/pic04.jpg', alt='')
+                h3
+                  | Unity
+                a.button(href='#') Go
+              .col.align-center
+                .image.round.fit
+                  img(src='images/pic05.png', alt='')
+                h3
+                  | Python
+                a.button(href='#') Go
+    // Footer
+    footer#footer
+      .copyright
+        ul.icons
+          li
+            a.icon.fa-twitter(href='#')
+              span.label Twitter
+          li
+            a.icon.fa-facebook(href='#')
+              span.label Facebook
+          li
+            a.icon.fa-instagram(href='#')
+              span.label Instagram
+          li
+            a.icon.fa-snapchat(href='#')
+              span.label Snapchat
+        p
+          | © Untitled. All rights reserved. Design:
+          a(href='https://templated.co') TEMPLATED
+          | . Images:
+          a(href='https://unsplash.com') Unsplash
+          | .
+    // Scripts
+    script(src='assets/js/jquery.min.js')
+    script(src='assets/js/jquery.scrolly.min.js')
+    script(src='assets/js/jquery.scrollex.min.js')
+    script(src='assets/js/skel.min.js')
+    script(src='assets/js/util.js')
+    script(src='assets/js/main.js')
