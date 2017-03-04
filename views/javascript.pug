@@ -38,18 +38,12 @@ html
             p Here is our in house code editor
             section#editor
               section#code_editors
-                #html.code_box
-                  h3 HTML
-                  textarea(name='html')
-                #css.code_box
-                  h3 CSS
-                  textarea(name='css')
                 #js.code_box
                   h3 JavaScript
                   textarea(name='js')
                 button(type='button', id='compile') Run
               section#output
-                iframe
+                canvas#canvas1
         section.wrapper.style1
           .inner
             // 2 Columns
