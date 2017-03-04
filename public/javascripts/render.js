@@ -2,17 +2,16 @@ var html_editor = document.querySelector('#html textarea'),
     css_editor = document.querySelector('#css textarea'),
     js_editor = document.querySelector('#js textarea');
 
+
 var editors = [html_editor, css_editor, js_editor];
 
 // Attaching the onkeyup Event
 editors.forEach(function(editor, i, arr) {
-
-    editor.addEventListener('keyup', function() {
-
+    var button = document.getElementById("compile");
+    button.addEventListener('click', function() {
         // The function that'll prepare the code and inject
         // into the iframe.
         render();
-
     }, false);
 
 });
