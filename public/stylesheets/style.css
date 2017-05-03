@@ -3,6 +3,14 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+#code_box input
+{
+  width:100%;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+}
+
+
 a {
   color: #00B7FF;
 }
