@@ -9,15 +9,17 @@ button.addEventListener('click', function() {
     render();
 }, false);
 
-var prepareSource = function() {
-    var js = js_editor.value;
-    return js;
-};
-
 var render = function() {
-    var source = prepareSource();
     function sketchProc(processing) {
-        eval(source);
+
+        // BEGINNING OF PROCESSING SPECIFIC WRAPPER FUNCTIONS
+
+        // ellipse = processing.ellipse;
+
+        // END OF PROCESSING SPECIFIC WRAPPER FUNCTIONS
+        debugger;
+
+        eval(js_editor.value);
     }
     var canvas = document.getElementById("canvas1");
     p = new Processing(canvas, sketchProc);
