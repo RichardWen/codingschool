@@ -1,7 +1,6 @@
-var js_editor = document.querySelector('#js textarea');
 var p;
-
 var button = document.getElementById("compile");
+console.log(button);
 button.addEventListener('click', function() {
     if (p && p.exit) {
         p.exit();
@@ -10,7 +9,7 @@ button.addEventListener('click', function() {
 }, false);
 
 var prepareSource = function() {
-    var js = js_editor.value;
+    var js = editor.getValue();
     return js;
 };
 
