@@ -29,7 +29,9 @@ var render = function() {
         };
 
         // END OF PROCESSING SPECIFIC WRAPPER FUNCTIONS
-
+        processing.setup = function() {
+          processing.size(2000,690);
+        }
         eval(editor.getValue());
     }
     var canvas = document.getElementById("canvas1");
