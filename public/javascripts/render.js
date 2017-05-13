@@ -27,7 +27,12 @@ var render = function() {
         rect = function() {
             return processing.rect.apply(this, arguments);
         };
-
+        fill = function() {
+            return processing.fill.apply(this, arguments);
+        };
+        stroke = function() {
+            return processing.stroke.apply(this, arguments);
+        };
         // END OF PROCESSING SPECIFIC WRAPPER FUNCTIONS
         processing.setup = function() {
           processing.size(2000,690);
