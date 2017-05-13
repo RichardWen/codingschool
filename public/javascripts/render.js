@@ -15,8 +15,17 @@ var render = function() {
 
         // NOTE: `ellipse = processing.ellipse` does not work to properly wrap
         // a processing function for some unknown reason
-        ellipse = function(x, y, xr, yr) {
-            processing.ellipse(x, y, xr, yr);
+        ellipse = function() {
+            return processing.ellipse.apply(this, arguments);
+        };
+        point = function() {
+            return processing.point.apply(this, arguments);
+        };
+        line = function() {
+            return processing.line.apply(this, arguments);
+        };
+        rect = function() {
+            return processing.rect.apply(this, arguments);
         };
 
         // END OF PROCESSING SPECIFIC WRAPPER FUNCTIONS
