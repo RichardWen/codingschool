@@ -1,7 +1,6 @@
-var js_editor = document.querySelector('#js textarea');
 var p;
-
 var button = document.getElementById("compile");
+console.log(button);
 button.addEventListener('click', function() {
     if (p && p.exit) {
         p.exit();
@@ -14,12 +13,15 @@ var render = function() {
 
         // BEGINNING OF PROCESSING SPECIFIC WRAPPER FUNCTIONS
 
-        // ellipse = processing.ellipse;
+        // NOTE: `ellipse = processing.ellipse` does not work to properly wrap
+        // a processing function for some unknown reason
+        ellipse = function(x, y, xr, yr) {
+            processing.ellipse(x, y, xr, yr);
+        };
 
         // END OF PROCESSING SPECIFIC WRAPPER FUNCTIONS
-        debugger;
 
-        eval(js_editor.value);
+        eval(editor.getValue());
     }
     var canvas = document.getElementById("canvas1");
     p = new Processing(canvas, sketchProc);
