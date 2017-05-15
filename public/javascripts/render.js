@@ -33,10 +33,20 @@ var render = function() {
         stroke = function() {
             return processing.stroke.apply(this, arguments);
         };
+        mousePressed = function() {
+           return processing.__mousePressed;
+        };
+        mouseX = function() {
+          return processing.mouseX;
+        };
+        mouseY = function() {
+          return processing.mouseY;
+        };
         // END OF PROCESSING SPECIFIC WRAPPER FUNCTIONS
         processing.setup = function() {
           processing.size(2000,690);
         }
+
         eval(editor.getValue());
     }
     var canvas = document.getElementById("canvas1");
