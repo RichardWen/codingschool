@@ -42,10 +42,22 @@ var render = function() {
         mouseY = function() {
           return processing.mouseY;
         };
+        size = function() {
+            return processing.size.apply(this, arguments);
+        };
+        background = function() {
+            return processing.size.apply(this, arguments);
+        };
+        strokeWeight = function() {
+            return processing.strokeWeight.apply(this, arguments);
+        };
+        triangle = function() {
+            return processing.triangle.apply(this, arguments);
+        };
         // END OF PROCESSING SPECIFIC WRAPPER FUNCTIONS
         processing.setup = function() {
           processing.size(2000,690);
-        }
+        };
 
         eval(editor.getValue());
     }
