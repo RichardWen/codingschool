@@ -60,6 +60,15 @@ var render = function() {
         random = function(limit) {
             return processing.random.apply(this, arguments);
         }
+        text = function(word, length, width) {
+            return processing.text.apply(this, arguments);
+        }
+        noLoop = function() {
+            return processing.noLoop.apply(this, arguments);
+        }
+        loop = function() {
+            return processing.loop.apply(this, arguments);
+        }
         // END OF PROCESSING SPECIFIC WRAPPER FUNCTIONS
         processing.setup = function() {
           processing.size(2000,690);
