@@ -42,6 +42,9 @@ var render = function() {
         mouseY = function() {
           return processing.mouseY;
         };
+        frameRate = function() {
+          return processing.frameRate.apply(this, arguments);
+        };
         size = function() {
             return processing.size.apply(this, arguments);
         };
@@ -54,6 +57,9 @@ var render = function() {
         triangle = function() {
             return processing.triangle.apply(this, arguments);
         };
+        random = function(limit) {
+            return processing.random.apply(this, arguments);
+        }
         // END OF PROCESSING SPECIFIC WRAPPER FUNCTIONS
         processing.setup = function() {
           processing.size(2000,690);
