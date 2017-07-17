@@ -10,7 +10,6 @@ button.addEventListener('click', function() {
 
 var render = function() {
     function sketchProc(processing) {
-
         // BEGINNING OF PROCESSING SPECIFIC WRAPPER FUNCTIONS
 
         // NOTE: `ellipse = processing.ellipse` does not work to properly wrap
@@ -69,11 +68,13 @@ var render = function() {
         loop = function() {
             return processing.loop.apply(this, arguments);
         }
+        millis = function() {
+            return processing.millis.apply(this, arguments);
+        }
         // END OF PROCESSING SPECIFIC WRAPPER FUNCTIONS
         processing.setup = function() {
           processing.size(2000,690);
         };
-
         eval(editor.getValue());
     }
     var canvas = document.getElementById("canvas1");
