@@ -67,11 +67,13 @@ var render = function() {
         loop = function() {
             return processing.loop.apply(this, arguments);
         }
+        millis = function() {
+            return processing.millis.apply(this, arguments);
+        }
         // END OF PROCESSING SPECIFIC WRAPPER FUNCTIONS
         processing.setup = function() {
           processing.size(2000,690);
         };
-
         eval(editor.getValue());
     }
     var canvas = document.getElementById("canvas1");
