@@ -1,6 +1,5 @@
 var p;
 var button = document.getElementById("compile");
-console.log(button);
 button.addEventListener('click', function() {
     if (p && p.exit) {
         p.exit();
@@ -10,7 +9,6 @@ button.addEventListener('click', function() {
 
 var render = function() {
     function sketchProc(processing) {
-
         // BEGINNING OF PROCESSING SPECIFIC WRAPPER FUNCTIONS
 
         // NOTE: `ellipse = processing.ellipse` does not work to properly wrap
@@ -49,7 +47,7 @@ var render = function() {
             return processing.size.apply(this, arguments);
         };
         background = function() {
-            return processing.size.apply(this, arguments);
+            return processing.background.apply(this, arguments);
         };
         strokeWeight = function() {
             return processing.strokeWeight.apply(this, arguments);
