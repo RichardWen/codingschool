@@ -70,6 +70,9 @@ var render = function() {
         millis = function() {
             return processing.millis.apply(this, arguments);
         }
+        noStroke = function() {
+          return processing.noStroke.apply(this, arguments);
+        }
         // END OF PROCESSING SPECIFIC WRAPPER FUNCTIONS
         processing.setup = function() {
           processing.size(2000,690);
